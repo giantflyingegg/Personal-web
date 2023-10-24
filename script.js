@@ -1,17 +1,19 @@
 window.onload = function() {
     // Target canvas element and ctx
     const canvas = document.getElementById('bannerCanvas');
-    const ctx = canvas.getContext('2d')
+    const ctx = canvas.getContext('2d');
     
-    //Set width
+    //Set width and height
     canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
     // Create image object
     const img = new Image();
-    img.src = 'Images/Banner.png';  // Replace with your image path
+    img.src = 'Images/Banner.png'; 
 
-    // Await mage load and then draw
+    // Await image load and then draw
     img.onload = function() {
+
         // Calculate the aspect ratio 
         const aspectRatio = img.width / img.height;
 
@@ -20,23 +22,23 @@ window.onload = function() {
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
             
         // Set heading font, size, and style
-        ctx.font = '200px Arial'; 
+        ctx.font = 'bold 150px Arial'; 
     
         // Text colour
         ctx.fillStyle = 'black';
 
         // Text coordinates
         const headX = 70;  
-        const headY = 400;  
+        const headY = 500;  
 
         // Display heading text
-        ctx.fillText('About', headX, headY);
-        ctx.strokeStyle = 'white';  // Outline color
+        ctx.fillText('About me', headX, headY);
+        ctx.strokeStyle = 'beige';  // Outline color
         ctx.lineWidth = 2;  // Outline thickness
-        ctx.strokeText('About', headX, headY); ///Draw ouutline
+        ctx.strokeText('About me', headX, headY); ///Draw ouutline
         
         // Set font, size, and style
-        ctx.font = '80px Arial'; 
+        ctx.font = 'bold 60px Arial'; 
     
         // Text colour
         ctx.fillStyle = 'black';
@@ -52,14 +54,15 @@ window.onload = function() {
         const lines = [
         "Dr Kieran Sweetman",
         "Noob Software Developer",
-        "Web3 Enthusiast"
+        "Web3 Enthusiast",
+        "DeSci and Global Health Advocate"
         ];
 
         // Loop for lines of text
         for (let i = 0; i < lines.length; i++) {
         ctx.fillText(lines[i], textX, textY);
         ctx.strokeText(lines[i], textX, textY); ///Draw outline
-        ctx.strokeStyle = 'white';  // Outline color
+        ctx.strokeStyle = 'beige';  // Outline color
         ctx.lineWidth = 2;  // Outline thickness
         textY += lineGap;  
     }

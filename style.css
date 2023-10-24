@@ -1,44 +1,55 @@
-/*basic styling for the page*/
-
 body {
   background-color: #f1f1f1;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0; /* Added to remove default browser margin */
 }   
 
 /* Style the top navigation bar */
-
 .navbar {
   overflow: hidden;
   background-color: #333;
 }
 
-
 /* Style the navigation bar links */
-li {
+.navbar li {
   float: left;
   display: block;
-  color:  white;
+  color: white;
   text-align: center;
-  padding: 14px 20px;
+  padding: 14px 40px;
   text-decoration: none;
 }
 
+.navbar a {
+  color: white; 
+  text-decoration: none; 
+}
+
+/* Added a class for when the navbar is in responsive mode */
+.navbar.responsive li {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+/* Added styles for the canvas element */
 #bannerCanvas {
   display: block;
   width: 100%;
   margin: 0 auto;
 }
 
-/*Mobile friendly*/
-
+/* Mobile friendly */
 @media screen and (max-width: 600px) {
-  .nav-bar.responsive {position: relative;}
-  .nav-bar.responsive a.icon {
+  .navbar.responsive {
+    position: relative;
+  }
+  .navbar.responsive a.icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .nav-bar.responsive li {
+  .navbar.responsive li {
     float: none;
     display: block;
     text-align: left;
