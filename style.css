@@ -1,33 +1,46 @@
-//basic styling for the page
+/*basic styling for the page*/
+
 body {
   background-color: #f1f1f1;
   font-family: Arial, Helvetica, sans-serif;
 }   
-/* Style the header */  
-
-.header {
-  padding: 30px;
-  text-align: center;
-  background: white;
-}   
-
-/* Increase the font size of the h1 element */
-.header h1 {
-  font-size: 40px;
-}
 
 /* Style the top navigation bar */
+
 .navbar {
   overflow: hidden;
   background-color: #333;
 }
 
+
 /* Style the navigation bar links */
-.navbar a {
+li {
   float: left;
   display: block;
-  color: white;
+  color:  white;
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
+}
+
+#bannerCanvas {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*Mobile friendly*/
+
+@media screen and (max-width: 600px) {
+  .nav-bar.responsive {position: relative;}
+  .nav-bar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav-bar.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
