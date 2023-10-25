@@ -2,30 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <title>Dr Kieran Sweetman</title> 
+        <title>Kieran Sweetman homepage</title> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div>
         <nav class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul>
-                <li class="link" ><a href="index.html">Home</a></li>
-                <li class="link" ><a href="about.html">About Me</a></li>
-                <li class="link" ><a href="contact.html">Contact Me</a></li>
-                <li class="link" ><a href="portfolio.html">Portfolio</a></li>
+                <li class="link"><a href="index.html">Home</a></li>
+                <li class="link"><a href="about.html">About Me</a></li>
+                <li class="link"><a href="www3ws.html">WW3WS</a></li>
+                <li class="link"><a href="portfolio.html">Portfolio</a></li>
+                <li class="link"><a href="contact.html">Contact Me</a></li>
             </ul>
         </nav>
     </div>
+    
     <div>
         <canvas id="bannerCanvas"></canvas>
     </div>
-    <div>
-        <h1>Dr Kieran Sweetman</h1>
-        <p>Hi, I'm Kieran. I'm a doctor</p>
-    </div>
+
+    <section id="about">
+        <div class="about-info">
+            <h1>Dr Kieran Sweetman MBBS MSc</h1>
+            <p>Hello! My name is Kieran. After a decade in the medical field, working as a physician in the NHS, I decided to take a leap of faith and transition into the exciting world of technology and innovation. During my final years in medicine, I served as an OPM registrar in a busy east London hospital. Since 2017, I've immersed myself in crypto and Web3, becoming an active participant in the Ethereum community and ecosystem. My journey over the past two years has led me to work with one of the most influential and innovative culture DAOs, fwbdao, and also attending a variety of Web3 and culture-centric conferences and events. I co-organize the Weekly Web3 Workshop (WW3WS), a meetup that brings enthusiasts together to explore the web3 space, and I’ve had the opportunity to build and run a full Ethereum node and validator. My interests span across various domains, from cutting-edge developments like Zero-Knowledge Proofs and strong privacy measures, to the emerging field of Artificial General Intelligence. I'm also deeply invested in the DeSci, DAO, retro game emulation, and generative art communities. While I have acquainted myself with JavaScript, HTML, CSS, and Solidity, my goal is to hone my software development skills further, allowing me to contribute meaningfully to a community that has given me so much. My passion for global health, a subject I focused on in my masters, also drives me to bring change to this underrepresented field in the DAO/DeSci and web3 spaces.</p>
+        </div>
+    </section>
+
+    <section id="www3ws">
+        <div class="www3ws-title">
+            <h2>Weekly Web3 Workshop</h2>
+            <p>The WW3WS is a weekly meetup dedicated to the the web3 space. Founded in 2022 by James Zaki, a developer with the Ethereum Foundation, our weekly meetups serve as a vehicle for talented individuals to share innovation, discussion, and exploration. While our roots lie in the Ethereum ecosystem, we also explore the broader crypto universe, tackling topics that range from the latest technological advancements to the economic, sociological, and philosophical underpinnings of this digital revolution.  Below are two examples of presentations I have given at the workshops:</p>
+        </div>
+        <div class="presentation-container">
+            <div class="slides-container">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSDLQfKs0tWd6gaWeCq79T68o_ZpgjW1AcjqmfBRpkpojyRNp687v0SIYokEKDhFHyQvuEQDjaaYv2d/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="Google Slide Presentation 1"></iframe>
+            </div>
+            <div class="slides-container">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQdSG0Z_7Ql2wGSNU7vOAwxUupGq8oj0ugV90vNnZB-Ho7a9yFOCd7mYtddlcryRj2lwJdFrzdNpcCO/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="Google Slide Presentation 2"></iframe>
+            </div>
+        </div>
+    </section>
+
     <footer>Some footer text</footer>
+    <script src="script.js"></script>
 </body>
-
-
-<script src="script.js"></script>
 </html>
