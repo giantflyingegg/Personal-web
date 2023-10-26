@@ -9,6 +9,14 @@ img.src = 'Images/Banner.png';
 //fade text 
 let alpha = 0;
 
+//Outline animation variables
+let outlineStartX = -400;
+
+///calculate font size
+function calcFontSize(canvasWidth) {
+    return Math.round(canvasWidth / 15);
+}
+
 // Function to draw on the canvas
 function draw() {
 
@@ -19,41 +27,56 @@ function draw() {
     canvas.height = canvas.width / aspectRatio;
 
     //clear canvas
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(-10, -10, canvas.width +20, canvas.height +20);
 
     // Draw the image
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-    // Set heading font, size, and style
-    ctx.font = 'bold 150px Arial'; 
+    // Calculate and set heading font, size, and style
+    const fontSizeHeading = calcFontSize(canvas.width);
+        // console.log('Font Size Heading', fontSizeHeading);
+    ctx.font = `bold ${fontSizeHeading}px Arial`; 
 
-    //fade effect
+    // fade effect
     ctx.fillStyle = `rgba(0, 0, 0,${alpha})`;
 
     // Text coordinates
-    const headX = 70;  
-    const headY = 500;  
+    const headX = canvas.width * 0.05;  
+    const headY = canvas.height * 0.5;  
 
     // Display heading text
     ctx.fillText('About me', headX, headY);
+    
+    //outline animation
+    const outlineFinalX = headX;
+    if (outlineStartX < outlineFinalX) {
+        outlineStartX += 2;
+    }
+
+    //adjust outline position
+    const outlineAdjust = 1;
+
+    // Display outline
     ctx.strokeStyle = 'beige';  // Outline color
     ctx.lineWidth = 2;  // Outline thickness
-    ctx.strokeText('About me', headX, headY); ///Draw ouutline
+    ctx.strokeText('About me', outlineStartX -outlineAdjust, headY); ///Draw ouutline
 
     //fade effect
     if (alpha < 1) {
-        alpha += 0.005;
+        alpha += 0.002;
     }
         
     // Set font, size, and style
-    ctx.font = 'bold 60px Arial'; 
+    const fontSizeText = fontSizeHeading / 2;
+        // console.log('Font Size Text', fontSizeText);
+    ctx.font = `bold ${fontSizeText}px Arial`; 
             
     // Text coordinates
-    let textX = 70;  
-    let textY = 600;
+    let textX = canvas.width * 0.05;  
+    let textY = headY + fontSizeHeading;
 
     // Gap between lines
-    const lineGap = 80; 
+    const lineGap = fontSizeText * 1.5; 
 
     // Array containing the lines of text
     const lines = [
@@ -67,7 +90,7 @@ function draw() {
     for (let i = 0; i < lines.length; i++) {
             ctx.fillStyle = `rgba(0, 0, 0, ${alpha})`;
             ctx.fillText(lines[i], textX, textY);
-            ctx.strokeText(lines[i], textX, textY); ///Draw outline
+            ctx.strokeText(lines[i], outlineStartX, textY); ///Draw outline
             ctx.strokeStyle = 'beige';  // Outline color
             ctx.lineWidth = 2;  // Outline thickness
             textY += lineGap;  
@@ -76,13 +99,12 @@ function draw() {
     requestAnimationFrame(draw);    
 }; 
 
-
-
 // Event listener for image load
 img.onload = draw;
 
 // Set up the canvas when the window has loaded
 window.onload = function() {
+
     // Set canvas width
     canvas.width = window.innerWidth;
 
@@ -91,9 +113,13 @@ window.onload = function() {
 
 // Event listener for window resize
 window.addEventListener('resize', function() {
+
     // Update the canvas width
     canvas.width = window.innerWidth;
-    // console.log('resize');
+
+    ///Reset outline start position
+    outlineStartX = -400;
+        // console.log('Canvas Width: ' + canvas.width);
 
     draw();
 });
