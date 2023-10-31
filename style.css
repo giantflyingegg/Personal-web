@@ -1,6 +1,6 @@
 body {
-  background-color: #f5f2e9;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f8fa;
+  font-family: Roboto, Helvetica, sans-serif;
   margin: 0; 
 }   
 
@@ -45,7 +45,7 @@ a {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 #bannerCanvas {
@@ -72,14 +72,14 @@ p {
   background-color: white;
   margin: 10px;
   border: solid 1px black;
-  border-radius: 5%;
+  border-radius: 2%;
 }  
 
 #www3ws {
   background-color: white;
-  margin: 10px;
+  margin: 12px;
   border: solid 1px black;
-  border-radius: 5%;
+  border-radius: 2%;
 }
 
 .presentation-container {
