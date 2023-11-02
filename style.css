@@ -1,6 +1,6 @@
 body {
   background-color: #f2f8fa;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: 'Roboto', Helvetica, sans-serif;
   margin: 0; 
 }   
 
@@ -55,29 +55,30 @@ a {
 }
 
 h1, h2 {
-  padding-top: 30px;
+  font-family: 'Pacifico', cursive;
+  padding-top: 80px;
   text-align: center;
-  font-size: 60px;
+  font-size: 40px;
   margin-top: 0;
 }
 
 p {
-  text-align: center;
+  text-align: left;
   font-size: 30px;
-  margin-top: 0;
-  padding: 0 40px;
+  margin: 60px;
+  padding: 0 100px;
 }
 
 #about {
   background-color: white;
-  margin: 10px;
+  margin: 40px;
   border: solid 1px black;
   border-radius: 2%;
 }  
 
 #www3ws {
   background-color: white;
-  margin: 12px;
+  margin: 40px;
   border: solid 1px black;
   border-radius: 2%;
 }
@@ -86,10 +87,12 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 20px;
 }
 
 .slides-container {
   flex: 1;
+  justify-content: center;
   min-width: 500px;
   padding: 20px 
 }
@@ -135,6 +138,12 @@ p {
   section {
     padding: 20px;
   }
-
+  p {
+    margin: 20px;
+    padding: 0;
+  };
+  .slides-container iframe {
+        width: 100%;
+  }
 }
 

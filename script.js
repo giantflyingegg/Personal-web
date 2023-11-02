@@ -35,7 +35,7 @@ function draw() {
     // Calculate and set heading font, size, and style
     const fontSizeHeading = calcFontSize(canvas.width);
         // console.log('Font Size Heading', fontSizeHeading);
-    ctx.font = `bold ${fontSizeHeading}px Roboto`; 
+    ctx.font = `bold ${fontSizeHeading}px Pacifico`; 
 
     // fade effect
     ctx.fillStyle = `rgba(0, 0, 0,${alpha})`;
