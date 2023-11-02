@@ -35,6 +35,7 @@ ul {
   padding: 0;
   margin: 0;
   display: flex;
+  text-align: center;
 }
 
 .link {
@@ -113,12 +114,12 @@ h1, h2 {
 /* Style footer */
 .social-icons {
   text-align: center;
-  margin: 20px;
+  margin: 50px;
 }
 
 .social-icons a {
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 40px;
   color: black; 
   font-size: 24px; 
 }
