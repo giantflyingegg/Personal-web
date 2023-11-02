@@ -62,11 +62,19 @@ h1, h2 {
   margin-top: 0;
 }
 
-p {
+.fade-in {
   text-align: left;
   font-size: 30px;
   margin: 60px;
   padding: 0 100px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in, transform 1s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #about {
