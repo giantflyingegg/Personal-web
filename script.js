@@ -37,8 +37,12 @@ function draw() {
         // console.log('Font Size Heading', fontSizeHeading);
     ctx.font = `bold ${fontSizeHeading}px Pacifico`; 
 
-    // fade effect
+    // fade in text effect
     ctx.fillStyle = `rgba(0, 0, 0,${alpha})`;
+   
+    if (alpha < 1) {
+        alpha += 0.005;
+    }
 
     // Text coordinates
     const headX = canvas.width * 0.05;  
@@ -61,10 +65,6 @@ function draw() {
     ctx.lineWidth = 2;  // Outline thickness
     ctx.strokeText('About me', outlineStartX -outlineAdjust, headY); ///Draw ouutline
 
-    //fade effect
-    if (alpha < 1) {
-        alpha += 0.002;
-    }
         
     // Set font, size, and style
     const fontSizeText = fontSizeHeading / 2;
